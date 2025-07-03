@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kabiru Ahmad Dokoro | Portfolio</title>
+  <meta content="Personal portfolio of Kabiru Ahmad Dokoro - Software Developer, Designer, and Innovator." name="description">
+  <meta content="portfolio, software developer, Kabiru Ahmad Dokoro, web developer, designer" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/AH$MART-LOGO.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.7;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero-content img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 24px #0ea5e955;
+      background: #fff;
+    }
+
+    .hero-content h1 {
+      font-family: 'Poppins', 'Roboto', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+      text-shadow: 0 2px 8px #000a;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #e0e7ff;
+      text-shadow: 0 2px 8px #000a;
+    }
+
+    .typed {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 2px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-content img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .hero-content h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .about-section {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 32px #6366f122;
+      padding: 3rem 2rem;
+      margin-top: -60px;
+      margin-bottom: 4rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 3;
+    }
+
+    .about-section h2 {
+      font-family: 'Poppins', 'Roboto', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #6366f1;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-section .about-details {
+      font-size: 1.1rem;
+      color: #334155;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section .about-list li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      color: #475569;
+    }
+
+    .about-section .about-list strong {
+      color: #0ea5e9;
+    }
+
+    /* Wonderful Glassmorphism Nav Style */
+    #header .navmenu {
+      background: rgba(255, 255, 255, 0.13);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.18);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(99, 102, 241, 0.18);
+      padding: 1.5rem 1rem;
+      margin: 2rem 0 0 0;
+      transition: box-shadow 0.2s;
+    }
+
+    #header .navmenu ul {
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #header .navmenu ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    #header .navmenu ul li a {
+      color: #222;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 0.7rem 1.5rem;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 8px #6366f122;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 1.08rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+
+    #header .navmenu ul li a.active,
+    #header .navmenu ul li a:hover {
+      background: linear-gradient(90deg, #6366f1 60%, #0ea5e9 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px #6366f144;
+    }
+
+    #header .navmenu ul li a .navicon {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+      color: #6366f1;
+      transition: color 0.2s;
+    }
+
+    #header .navmenu ul li a.active .navicon,
+    #header .navmenu ul li a:hover .navicon {
+      color: #fff;
+    }
+
+    @media (max-width: 991px) {
+      #header .navmenu {
+        border-radius: 18px;
+        margin: 1rem 0 0 0;
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    /* Skills Section Styles */
+    .skills-section {
+      background: linear-gradient(120deg, #f0f4ff 60%, #e0f7fa 100%);
+      border-radius: 24px;
+      box-shadow: 0 4px 32px #6366f122;
+      padding: 2.5rem 2rem 2rem 2rem;
+      margin-top: -1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+      border: 2px solid #e0e7ff;
+      animation: fadeInUp 0.7s;
+    }
+
+    .skills-title {
+      font-family: 'Poppins', 'Roboto', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #6366f1;
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .skills-grid {
+      margin-top: 0.5rem;
+    }
+
+    .skill-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px #6366f122;
+      padding: 1.2rem 1rem 1rem 1rem;
+      margin-bottom: 0.5rem;
+      border: 1.5px solid #e0e7ff;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      min-height: 110px;
+      position: relative;
+    }
+
+    .skill-card:hover {
+      box-shadow: 0 8px 32px #6366f144;
+      border-color: #6366f1;
+    }
+
+    .skill-icon {
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 0.5rem;
+      margin-right: 0.7rem;
+      box-shadow: 0 2px 8px #6366f122;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.7rem;
+      min-height: 2.7rem;
+    }
+
+    .skill-name {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #222;
+      flex: 1 1 auto;
+    }
+
+    .skill-percent {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #6366f1;
+      margin-left: 0.5rem;
+    }
+
+    .skill-progress {
+      height: 0.7rem;
+      border-radius: 8px;
+      background: #e0e7ff;
+      margin-top: 0.3rem;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: width 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+
+
+    .brand-name {
+      font-size: 4rem;            /* Make it big! Adjust as needed */
+      font-weight: bold;
+      font-family: Arial, sans-serif;  /* Or your preferred font */
+      background: linear-gradient(to right, #c536cf, #006ca1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .brand-name .dollar {
+      color: #FFD700;  /* Classic gold */
+      -webkit-text-fill-color: #FFD700;
+      background: none;
+    }
+
+    @media (max-width: 600px) {
+      .skills-section {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+      }
+
+      .skill-card {
+        padding: 0.8rem 0.5rem 0.7rem 0.5rem;
+      }
+
+      .skills-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
+    </div>
+    <a href="#hero" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
+    </a>
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="portfolio.html"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background d-flex align-items-center justify-content-center"
+      style="min-height: 100vh; position: relative;">
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="hero-bg"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.7;">
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100" style="z-index: 2;">
+        <div class="row align-items-center justify-content-center flex-lg-row flex-column-reverse">
+          <div class="col-lg-8 text-center text-lg-start py-4 mx-auto">
+            <h1 class="display-4 fw-bold mb-3"
+              style="color: #fff; text-shadow: 0 2px 8px #000a;"><h1 class="brand-name">AH<span class="dollar">$</span>MART</h1></h1>
+            <p class="lead mb-4"
+              style="color: #fff; text-shadow: 0 2px 8px #000a;">
+              <span class="typed"
+                data-typed-items="Java Spring boot, Node.js, React.js, Express.js, UI/UX Design, Web Development"></span>
+            </p>
+            <a href="portfolio.html" class="btn btn-primary btn-lg me-2">View Portfolio</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p class="about-details">I'm a passionate software developer with a love for building impactful digital products. I
+        specialize in full-stack web development, UI/UX design, and creative problem solving. My goal is to deliver
+        solutions that are not only functional but also beautiful and user-friendly.</p>
+      <ul class="about-list list-unstyled row">
+        <li class="col-md-6 mb-2"><strong>Location:</strong> Kano, Nigeria</li>
+        <li class="col-md-6 mb-2"><strong>Email:</strong> email@example.com</li>
+        <li class="col-md-6 mb-2"><strong>Phone:</strong> +234 000 000 0000</li>
+        <li class="col-md-6 mb-2"><strong>Degree:</strong> B.Sc. Computer Science</li>
+        <li class="col-md-6 mb-2"><strong>Interests:</strong> Web Apps, Open Source, UI/UX, AI</li>
+        <li class="col-md-6 mb-2"><strong>Freelance:</strong> Available</li>
+      </ul>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section" style="margin-top: -1.5rem;">
+      <h2 class="skills-title" style="font-size:2.1rem;font-weight:800;color:#6366f1;margin-bottom:1.2rem;">Skills</h2>
+      <div class="skills-grid row g-4">
+        <!-- Skill Item -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-cup-hot skill-icon bg-primary text-white"></i>
+              <span class="skill-name">Java &amp; Spring Boot</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-node-plus skill-icon bg-success text-white"></i>
+              <span class="skill-name">Node.js &amp; Express</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-react skill-icon bg-info text-white"></i>
+              <span class="skill-name">React.js</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-palette skill-icon bg-warning text-white"></i>
+              <span class="skill-name">UI/UX Design</span>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-filetype-html skill-icon bg-danger text-white"></i>
+              <span class="skill-name">HTML &amp; CSS</span>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-database-fill-gear skill-icon bg-secondary text-white"></i>
+              <span class="skill-name">MySQL</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-card">
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-git skill-icon bg-dark text-white"></i>
+              <span class="skill-name">Git &amp; Version Control</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress skill-progress">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Kabiru Ahmad Dokoro</strong> <span>All Rights
+          Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed &amp; built with ❤️ by Kabiru Ahmad Dokoro
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

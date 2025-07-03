@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    HEAD SECTION: Make sure to match these includes and meta tags across all pages for consistent fonts, icons, and layout.
+    - Favicon and apple-touch-icon
+    - Google Fonts (Roboto, Poppins)
+    - Bootstrap, Bootstrap Icons, AOS, Glightbox, main.css
+  -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Glassmorphism Nav Style (matches index.html) */
+    #header .navmenu {
+      background: rgba(255, 255, 255, 0.13);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.18);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(99, 102, 241, 0.18);
+      padding: 1.5rem 1rem;
+      margin: 2rem 0 0 0;
+      transition: box-shadow 0.2s;
+    }
+    #header .navmenu ul {
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+    #header .navmenu ul li {
+      margin-bottom: 0.7rem;
+    }
+    #header .navmenu ul li a {
+      color: #222;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 0.7rem 1.5rem;
+      background: rgba(255,255,255,0.7);
+      box-shadow: 0 2px 8px #6366f122;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 1.08rem;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    #header .navmenu ul li a.active, #header .navmenu ul li a:hover {
+      background: linear-gradient(90deg, #6366f1 60%, #0ea5e9 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px #6366f144;
+    }
+    #header .navmenu ul li a .navicon {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+      color: #6366f1;
+      transition: color 0.2s;
+    }
+    #header .navmenu ul li a.active .navicon, #header .navmenu ul li a:hover .navicon {
+      color: #fff;
+    }
+    @media (max-width: 991px) {
+      #header .navmenu {
+        border-radius: 18px;
+        margin: 1rem 0 0 0;
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    /* Exceptional Portfolio Grid */
+    .portfolio-section {
+      background: linear-gradient(120deg, #f0f4ff 60%, #e0f7fa 100%);
+      min-height: 100vh;
+      padding: 4rem 0 2rem 0;
+      position: relative;
+      z-index: 1;
+    }
+    .portfolio-section .section-title h2 {
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: #6366f1;
+      letter-spacing: -1px;
+      margin-bottom: 0.5rem;
+    }
+    .portfolio-section .section-title p {
+      font-size: 1.2rem;
+      color: #334155;
+      margin-bottom: 2.5rem;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .portfolio-card {
+      position: relative;
+      background: rgba(255,255,255,0.97);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px #6366f122, 0 2px 8px #0ea5e933;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+      display: flex;
+      flex-direction: column;
+      min-height: 440px;
+      border: 2px solid #e0e7ff;
+      margin-bottom: 0.5rem;
+    }
+    .portfolio-card.featured {
+      border: 2.5px solid #fbbf24;
+      box-shadow: 0 12px 48px #fbbf2433, 0 2px 8px #6366f122;
+    }
+    .card-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 210px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #6366f1 60%, #0ea5e9 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+      border-bottom: 1.5px solid #e0e7ff;
+    }
+    .portfolio-card:hover .card-image {
+      transform: scale(1.07) rotate(-1deg);
+      filter: brightness(0.92) saturate(1.2);
+    }
+    .featured-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: linear-gradient(90deg, #fbbf24 60%, #f59e42 100%);
+      color: #fff;
+      font-size: 0.98rem;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 0.3rem 0.9rem 0.3rem 0.7rem;
+      box-shadow: 0 2px 8px #fbbf2433;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      letter-spacing: 0.5px;
+      animation: pop-badge 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    @keyframes pop-badge {
+      0% { transform: scale(0.7); opacity: 0; }
+      80% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, #6366f1cc 60%, #0ea5e9cc 100%);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.25s;
+      z-index: 1;
+    }
+    .portfolio-card:hover .image-overlay {
+      opacity: 1;
+    }
+    .overlay-content {
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      animation: fadeInUp 0.5s;
+    }
+    .overlay-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.2rem;
+      color: #fbbf24;
+      filter: drop-shadow(0 2px 8px #fff8);
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .portfolio-card .card-body {
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .portfolio-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #6366f1;
+      margin-bottom: 0.7rem;
+    }
+    .portfolio-card .project-tags {
+      margin-bottom: 0.7rem;
+    }
+    .portfolio-card .project-tag {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #6366f1;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 0.2rem 0.7rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+    .portfolio-card .card-desc {
+      color: #475569;
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+    .portfolio-card .project-links {
+      margin-top: auto;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .portfolio-card .btn {
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-radius: 8px;
+      margin-bottom: 0.2rem;
+      padding: 0.6rem 1.4rem;
+      box-shadow: 0 2px 8px #6366f122;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      letter-spacing: 0.2px;
+      border: none;
+    }
+    .portfolio-card .btn-success {
+      background: linear-gradient(90deg, #22d3ee 60%, #6366f1 100%);
+      color: #fff;
+    }
+    .portfolio-card .btn-dark {
+      background: #222;
+      color: #fff;
+    }
+    .portfolio-card .btn i {
+      font-size: 1.1rem;
+      margin-right: 0.2rem;
+    }
+    @media (max-width: 600px) {
+      .portfolio-section {
+        padding: 2rem 0 1rem 0;
+      }
+      .portfolio-card img, .card-image-wrap {
+        height: 140px;
+      }
+    }
+
+    /* Redesigned Project Card Styles */
+    .portfolio-card .card-image-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+    }
+    .portfolio-card .card-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.2s;
+    }
+    .portfolio-card .featured-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #6366f1;
+      color: #fff;
+      padding: 0.3rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      z-index: 2;
+    }
+    .portfolio-card .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .portfolio-card:hover .card-image {
+      transform: scale(1.1);
+    }
+    .portfolio-card:hover .image-overlay {
+      opacity: 1;
+    }
+    .portfolio-card .overlay-content {
+      text-align: center;
+      padding: 1rem;
+    }
+    .portfolio-card .overlay-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .portfolio-card.featured {
+      border: 2px solid #6366f1;
+      box-shadow: 0 12px 48px rgba(99, 102, 241, 0.3);
+    }
+    .portfolio-card.featured:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 64px rgba(99, 102, 241, 0.4);
+    }
+    .portfolio-card .btn-lg {
+      padding: 0.6rem 1.4rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body class="index-page">
+  <!--
+    HEADER SECTION: This is the side navigation and profile area.
+    - Keep the structure, classes, and nav links the same on all pages for a uniform look.
+    - Update the nav links to highlight the current page with the 'active' class.
+  -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+    <a href="index.html#hero" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
+    </a>
+    <div class="social-links text-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <!--
+          NAVIGATION LINKS:
+          - Use the same order and icons for all pages.
+          - Add 'active' class to the current page link.
+        -->
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="portfolio.html" class="active"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <!-- Exceptional Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Welcome to my showcase! Here are some of the projects that best represent my skills, creativity, and passion for building impactful digital products. Each project demonstrates my ability to deliver modern, robust, and user-focused solutions—qualities I would bring to your team.</p>
+      </div>
+      <div class="container portfolio-grid">
+        <!-- Project Card 1 (Featured) -->
+        <div class="portfolio-card featured" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-image-wrap">
+            <img src="assets/img/portfolio/app-1.jpg" alt="Attendance Management System" class="card-image">
+            <span class="featured-badge"><i class="bi bi-star-fill"></i> Featured</span>
+            <div class="image-overlay">
+              <div class="overlay-content">
+                <i class="bi bi-qr-code-scan overlay-icon"></i>
+                <span>Attendance Management System</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Attendance Management System</h3>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">JSP</span>
+              <span class="project-tag">Servlets</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+            <div class="card-desc">A full-stack web app for lecturers to manage student attendance via QR codes. Built for reliability and ease of use in real academic settings.</div>
+            <div class="project-links">
+              <a href="https://live-demo-link.com" class="btn btn-success btn-lg" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a href="https://github.com/yourusername/attendance-system" class="btn btn-dark btn-lg" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-image-wrap">
+            <img src="assets/img/portfolio/app-2.jpg" alt="Booking System API" class="card-image">
+            <div class="image-overlay">
+              <div class="overlay-content">
+                <i class="bi bi-calendar2-check overlay-icon"></i>
+                <span>Booking System API</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Booking System API</h3>
+            <div class="project-tags">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <div class="card-desc">RESTful API for a room booking system with a dynamic HTML frontend. Designed for speed, clarity, and real-world usability.</div>
+            <div class="project-links">
+              <a href="https://live-demo-link.com" class="btn btn-success btn-lg" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a href="https://github.com/yourusername/booking-api" class="btn btn-dark btn-lg" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </section>
+  </main>
+  <!--
+    FOOTER SECTION: Use the same footer for all pages for a uniform look.
+  -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span id="copyright-year"></span> <strong class="px-1 sitename">Kabiru Ahmad Dokoro</strong> &mdash; All Rights Reserved</p>
+      </div>
+      <div class="credits">
+        Designed &amp; built with <span style="color:#fbbf24;">&#9733;</span> by Kabiru Ahmad Dokoro
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Auto-update copyright year
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+  <!--
+    SCROLL TOP & PRELOADER: These elements and scripts should be present on all pages for consistent UX.
+  -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <!--
+    JS SCRIPTS: Keep these at the end of the body for all pages.
+    - Only include the vendor scripts you actually use.
+    - main.js should be included for site-wide JS.
+  -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
