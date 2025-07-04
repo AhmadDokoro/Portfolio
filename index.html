@@ -42,9 +42,23 @@
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* Fill the area, cropping if needed */
+      object-position: center center;
       z-index: 0;
       opacity: 0.7;
+      transition: object-fit 0.3s, object-position 0.3s;
+      display: block;
+    }
+
+    .hero-bg-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.7;
+      pointer-events: none;
     }
 
     .hero-content {
@@ -296,20 +310,43 @@
 
 
     .brand-name {
-      font-size: 4rem;            /* Make it big! Adjust as needed */
+      font-size: 4rem;
       font-weight: bold;
-      font-family: Arial, sans-serif;  /* Or your preferred font */
+      font-family: Arial, sans-serif;
       background: linear-gradient(to right, #c536cf, #006ca1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: left;
       margin: 20px 0;
+      position: relative;
+      display: inline-block;
     }
 
+    /* Shining effect for brand name */
+    .brand-name.shiny-text {
+      color: #b5b5b5a4;
+      background: linear-gradient(120deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 60%), linear-gradient(to right, #c536cf, #006ca1);
+      background-size: 200% 100%, 100% 100%;
+      background-repeat: no-repeat;
+      background-clip: text, text;
+      -webkit-background-clip: text, text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+    @keyframes shine {
+      0% {
+        background-position: 100% 0, 0 0;
+      }
+      100% {
+        background-position: -100% 0, 0 0;
+      }
+    }
     .brand-name .dollar {
-      color: #FFD700;  /* Classic gold */
+      color: #FFD700;
       -webkit-text-fill-color: #FFD700;
       background: none;
+      position: relative;
+      z-index: 2;
     }
 
     @media (max-width: 600px) {
@@ -333,7 +370,7 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
+      <img src="assets/img/Ahmad.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
     </div>
     <a href="#hero" class="logo d-flex align-items-center justify-content-center">
       <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
@@ -359,13 +396,14 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background d-flex align-items-center justify-content-center"
       style="min-height: 100vh; position: relative;">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="hero-bg"
+      <canvas class="hero-bg-canvas"></canvas>
+      <img src="assets/img/home-main.jpg" alt="" data-aos="fade-in" class="hero-bg"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.7;">
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100" style="z-index: 2;">
         <div class="row align-items-center justify-content-center flex-lg-row flex-column-reverse">
           <div class="col-lg-8 text-center text-lg-start py-4 mx-auto">
             <h1 class="display-4 fw-bold mb-3"
-              style="color: #fff; text-shadow: 0 2px 8px #000a;"><h1 class="brand-name">AH<span class="dollar">$</span>MART</h1></h1>
+              style="color: #fff; text-shadow: 0 2px 8px #000a;"><h1 class="brand-name shiny-text">AH<span class="dollar">$</span>MART</h1></h1>
             <p class="lead mb-4"
               style="color: #fff; text-shadow: 0 2px 8px #000a;">
               <span class="typed"
@@ -509,6 +547,73 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Simple animated particles background for hero section
+    (function() {
+      const canvas = document.querySelector('.hero-bg-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let dpr = window.devicePixelRatio || 1;
+      let width = 0, height = 0;
+      let particles = [];
+      const PARTICLE_COUNT = 200; // Increased from 120
+      const BASE_SIZE = 2;
+      const SPEED = 0.7; // Increased from 0.3
+      function resize() {
+        width = canvas.offsetWidth;
+        height = canvas.offsetHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(dpr, dpr);
+      }
+      function randomColor() {
+        return 'rgba(255,255,255,' + (0.5 + Math.random() * 0.5) + ')';
+      }
+      function createParticles() {
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+          // Spread particles randomly across the whole canvas
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * SPEED,
+            vy: (Math.random() - 0.5) * SPEED,
+            r: BASE_SIZE + Math.random() * 2,
+            color: randomColor(),
+          });
+        }
+      }
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (let p of particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+          // bounce off edges
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.shadowColor = '#fff';
+          ctx.shadowBlur = 8;
+          ctx.fill();
+          ctx.shadowBlur = 0;
+        }
+        requestAnimationFrame(animate);
+      }
+      function init() {
+        resize();
+        createParticles();
+        animate();
+      }
+      window.addEventListener('resize', () => {
+        resize();
+        createParticles();
+      });
+      setTimeout(init, 100); // Wait for layout
+    })();
+  </script>
 </body>
 
 </html>
