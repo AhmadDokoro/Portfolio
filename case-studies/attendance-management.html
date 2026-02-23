@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project Overview: Attendance Management System | Kabiru Ahmad Dokoro</title>
+  <meta name="description" content="Project overview for Attendance Management System — JSP/Servlet + MySQL." />
+
+  <link href="../assets/img/AH$MART-LOGO.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page page-wrap">
+  <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list" aria-label="Toggle navigation" role="button" tabindex="0"></i>
+
+    <div class="profile-img">
+      <img src="../assets/img/Ahmad.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
+    </div>
+
+    <a href="../index.html#hero" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="../index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="../index.html#projects" class="active"><i class="bi bi-kanban navicon"></i>Projects</a></li>
+        <li><a href="../portfolio.html"><i class="bi bi-images navicon"></i>All Projects</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main" tabindex="-1">
+    <section class="section cs-block cs-hero">
+      <div class="container cs-container">
+        <div class="cs-kicker">
+          <span class="section-kicker"><i class="bi bi-file-text"></i> Project overview</span>
+        </div>
+
+        <div class="cs-hero__grid">
+          <div>
+            <h1 class="cs-title">Attendance Management System</h1>
+            <p class="cs-summary">A database-backed attendance workflow built with JSP/Servlet and MySQL—designed to reduce manual errors and improve record keeping.</p>
+
+            <div class="cs-badges" aria-label="Tech stack">
+              <span class="stack-badge">Java</span>
+              <span class="stack-badge">JSP</span>
+              <span class="stack-badge">Servlets</span>
+              <span class="stack-badge">MySQL</span>
+            </div>
+
+            <div class="cs-actions">
+              <a class="btn btn-primary btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+              <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
+            </div>
+          </div>
+
+          <div class="cs-hero__media">
+            <img src="../assets/img/AMS.jpeg" alt="Attendance Management System preview screenshot" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Problem statement</h2>
+        <p class="cs-text">Manual attendance is time-consuming and error-prone. This system streamlines class attendance with a simple workflow and a MySQL-backed log that can be reviewed and exported.</p>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Key features</h2>
+        <div class="cs-two-col">
+          <div>
+            <ul class="cs-bullets">
+              <li>Role-based login (lecturer/admin/student).</li>
+              <li>Create sessions and record attendance entries.</li>
+              <li>Attendance logs with filtering and basic reporting.</li>
+            </ul>
+          </div>
+          <div>
+            <img class="cs-shot" src="../assets/img/AMS.jpeg" alt="Attendance Management System screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">System architecture</h2>
+        <figure class="cs-figure">
+          <img src="../assets/img/portfolio/architecture-placeholder.svg" alt="Architecture diagram placeholder" loading="lazy">
+        </figure>
+        <ul class="cs-bullets">
+          <li>MVC-style separation between views (JSP), controllers (Servlets), and persistence logic.</li>
+          <li>Database-backed logs provide a single source of truth for reporting/export.</li>
+          <li>Validation logic prevents common issues (e.g., duplicates and invalid sessions).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Database design</h2>
+        <figure class="cs-figure">
+          <img src="../assets/img/portfolio/erd-placeholder.svg" alt="Entity relationship diagram placeholder" loading="lazy">
+        </figure>
+        <p class="cs-text">A relational schema stores users, sessions, and attendance entries with constraints to protect integrity and keep reporting simple.</p>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Deployment &amp; hosting</h2>
+        <ul class="cs-bullets">
+          <li>Package the app and configure DB connection using environment variables.</li>
+          <li>Deploy to a hosting provider or university server environment.</li>
+          <li>Use Docker optionally for consistent runtime configuration across machines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <div class="cs-demo">
+          <h2 class="cs-section-title">Demo access</h2>
+          <div class="cs-credentials" aria-label="Demo credentials">
+            <div><span class="cs-label">Email:</span> demo@example.com</div>
+            <div><span class="cs-label">Password:</span> demo1234</div>
+          </div>
+          <p class="cs-note">Use the test credentials above for demo access. Replace these when you deploy a live version.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Engineering decisions</h2>
+        <ul class="cs-bullets">
+          <li>Simple role-based flows keep the UI and database operations predictable.</li>
+          <li>MySQL-backed logs make reporting/export reliable and auditable.</li>
+          <li>Validation at write-time prevents duplicate or inconsistent attendance entries.</li>
+        </ul>
+
+        <h3 class="h5 mt-4 mb-2">Notes</h3>
+        <ul class="cs-bullets">
+          <li>Add screenshots (login, lecturer dashboard, logs)</li>
+          <li>Add deployment details or run instructions</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span id="copyright-year"></span> <strong class="px-1 sitename">Kabiru Ahmad Dokoro</strong> — All Rights Reserved</p>
+      </div>
+      <div class="credits">Designed &amp; built by Kabiru Ahmad Dokoro</div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const el = document.getElementById('copyright-year');
+      if (el) el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

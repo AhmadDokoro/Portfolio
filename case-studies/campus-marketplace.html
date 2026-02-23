@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project Overview: Campus Marketplace Platform | Kabiru Ahmad Dokoro</title>
+  <meta name="description" content="Project overview for Campus Marketplace Platform — Spring Boot + Thymeleaf + MySQL + Cloudinary." />
+
+  <link href="../assets/img/AH$MART-LOGO.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page page-wrap">
+  <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list" aria-label="Toggle navigation" role="button" tabindex="0"></i>
+
+    <div class="profile-img">
+      <img src="../assets/img/Ahmad.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
+    </div>
+
+    <a href="../index.html#hero" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="../index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="../index.html#projects" class="active"><i class="bi bi-kanban navicon"></i>Projects</a></li>
+        <li><a href="../portfolio.html"><i class="bi bi-images navicon"></i>All Projects</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main" tabindex="-1">
+    <section class="section cs-block cs-hero">
+      <div class="container cs-container">
+        <div class="cs-kicker">
+          <span class="section-kicker"><i class="bi bi-file-text"></i> Project overview</span>
+        </div>
+
+        <div class="cs-hero__grid">
+          <div>
+            <h1 class="cs-title">Campus Marketplace Platform</h1>
+            <p class="cs-summary">A campus-first marketplace where users can list items, browse/search efficiently, and manage listings with role-based access.</p>
+
+            <div class="cs-badges" aria-label="Tech stack">
+              <span class="stack-badge">Java</span>
+              <span class="stack-badge">Spring Boot</span>
+              <span class="stack-badge">Spring Data JPA</span>
+              <span class="stack-badge">Thymeleaf</span>
+              <span class="stack-badge">MySQL</span>
+              <span class="stack-badge">Cloudinary</span>
+            </div>
+
+            <div class="cs-actions">
+              <a class="btn btn-primary btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+              <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
+            </div>
+          </div>
+
+          <div class="cs-hero__media">
+            <img src="../assets/img/CMP.jpeg" alt="Campus Marketplace Platform preview screenshot" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Problem statement</h2>
+        <p class="cs-text">Students often need a safe, simple way to buy/sell items within their campus community. The goal is a marketplace where users can list items, browse/search quickly, and keep data consistent with a clean backend design.</p>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Key features</h2>
+        <div class="cs-two-col">
+          <div>
+            <ul class="cs-bullets">
+              <li>User authentication + role-based access (buyer/seller/admin).</li>
+              <li>Create/update/delete listings with image upload to Cloudinary.</li>
+              <li>Search, filters, and pagination for browsing items.</li>
+              <li>Relational modeling with clear ownership (seller → items) and validations.</li>
+            </ul>
+          </div>
+          <div>
+            <img class="cs-shot" src="../assets/img/CMP.jpeg" alt="Campus Marketplace Platform screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">System architecture</h2>
+        <figure class="cs-figure">
+          <img src="../assets/img/portfolio/architecture-placeholder.svg" alt="Architecture diagram placeholder" loading="lazy">
+        </figure>
+        <ul class="cs-bullets">
+          <li>Layered structure keeps controllers thin and business logic in services.</li>
+          <li>Repository layer isolates persistence, making features easier to test and change.</li>
+          <li>Cloudinary integration is handled as a service to keep uploads consistent and secure.</li>
+          <li>Pagination + filtering are handled at the query/service layer for performance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Database design</h2>
+        <figure class="cs-figure">
+          <img src="../assets/img/portfolio/erd-placeholder.svg" alt="Entity relationship diagram placeholder" loading="lazy">
+        </figure>
+        <p class="cs-text">The schema models users, roles, and listings with clear ownership and constraints to protect data integrity (e.g., seller → items relationships and validation rules).</p>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Deployment &amp; hosting</h2>
+        <ul class="cs-bullets">
+          <li>Docker: containerize the app for consistent builds across environments.</li>
+          <li>Hosting: deploy the container to a platform like Render (or similar).</li>
+          <li>Database: connect to MySQL/TiDB using environment-based configuration.</li>
+          <li>Environment variables: keep secrets out of code (DB URL, credentials, Cloudinary keys).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <div class="cs-demo">
+          <h2 class="cs-section-title">Demo access</h2>
+          <div class="cs-credentials" aria-label="Demo credentials">
+            <div><span class="cs-label">Email:</span> demo@example.com</div>
+            <div><span class="cs-label">Password:</span> demo1234</div>
+          </div>
+          <p class="cs-note">Use the test account above to explore the app. Replace these with your real demo credentials when you deploy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Engineering decisions</h2>
+        <ul class="cs-bullets">
+          <li>Layered architecture to keep business rules maintainable and controllers lightweight.</li>
+          <li>Relational constraints + validations to prevent inconsistent marketplace data.</li>
+          <li>Service-based Cloudinary integration to centralize media handling and error cases.</li>
+        </ul>
+
+        <h3 class="h5 mt-4 mb-2">What to add next</h3>
+        <ul class="cs-bullets">
+          <li>Real screenshots (listing, search, admin view)</li>
+          <li>Deployment link (Render/Railway/VPS)</li>
+          <li>API endpoints table or OpenAPI screenshot</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span id="copyright-year"></span> <strong class="px-1 sitename">Kabiru Ahmad Dokoro</strong> — All Rights Reserved</p>
+      </div>
+      <div class="credits">Designed &amp; built by Kabiru Ahmad Dokoro</div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const el = document.getElementById('copyright-year');
+      if (el) el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project Overview: Weather System | Kabiru Ahmad Dokoro</title>
+  <meta name="description" content="Project overview for Node.js Weather System — API integration and reliability." />
+
+  <link href="../assets/img/AH$MART-LOGO.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page page-wrap">
+  <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list" aria-label="Toggle navigation" role="button" tabindex="0"></i>
+
+    <div class="profile-img">
+      <img src="../assets/img/Ahmad.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
+    </div>
+
+    <a href="../index.html#hero" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="../index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="../index.html#projects" class="active"><i class="bi bi-kanban navicon"></i>Projects</a></li>
+        <li><a href="../portfolio.html"><i class="bi bi-images navicon"></i>All Projects</a></li>
+        <li><a href="../index.html#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main" tabindex="-1">
+    <section class="section cs-block cs-hero">
+      <div class="container cs-container">
+        <div class="cs-kicker">
+          <span class="section-kicker"><i class="bi bi-file-text"></i> Project overview</span>
+        </div>
+
+        <div class="cs-hero__grid">
+          <div>
+            <h1 class="cs-title">Node.js Weather System</h1>
+            <p class="cs-summary">A lightweight project focused on API integration, input validation, and reliable UX states (loading, success, error).</p>
+
+            <div class="cs-badges" aria-label="Tech stack">
+              <span class="stack-badge">Node.js</span>
+              <span class="stack-badge">HTTP</span>
+              <span class="stack-badge">API integration</span>
+            </div>
+
+            <div class="cs-actions">
+              <a class="btn btn-primary btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+              <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
+            </div>
+          </div>
+
+          <div class="cs-hero__media">
+            <img src="../assets/img/wanderlite.jpeg" alt="Weather system preview screenshot" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Problem statement</h2>
+        <p class="cs-text">Users want quick, accurate weather results. The app must handle invalid input and network failures gracefully while remaining fast and simple.</p>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Key features</h2>
+        <div class="cs-two-col">
+          <div>
+            <ul class="cs-bullets">
+              <li>Calls a public weather API and renders results cleanly.</li>
+              <li>Input validation and clear error states for user confidence.</li>
+              <li>Separation of concerns for maintainability.</li>
+            </ul>
+          </div>
+          <div>
+            <img class="cs-shot" src="../assets/img/wanderlite.jpeg" alt="Weather system screenshot" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">System architecture</h2>
+        <figure class="cs-figure">
+          <img src="../assets/img/portfolio/architecture-placeholder.svg" alt="Architecture diagram placeholder" loading="lazy">
+        </figure>
+        <ul class="cs-bullets">
+          <li>Request handler validates input before calling the external API.</li>
+          <li>Service module isolates API calls and error handling.</li>
+          <li>UI renders consistent states (loading/success/error) for better UX.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Database design</h2>
+        <p class="cs-text">This project is stateless and does not require a database. If persistence is added later (e.g., favorites/history), an ERD can be included here.</p>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Deployment &amp; hosting</h2>
+        <ul class="cs-bullets">
+          <li>Deploy the Node app to a platform like Render (or similar) for quick demo access.</li>
+          <li>Use environment variables for API keys and base URLs.</li>
+          <li>Add request timeouts and rate-limit handling for reliability.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <div class="cs-demo">
+          <h2 class="cs-section-title">Demo access</h2>
+          <div class="cs-credentials" aria-label="Demo credentials">
+            <div><span class="cs-label">URL:</span> https://example-demo-url.com</div>
+            <div><span class="cs-label">Note:</span> No login required</div>
+          </div>
+          <p class="cs-note">Replace the demo URL above once you deploy this project. This app is public-facing and typically does not require credentials.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Engineering decisions</h2>
+        <ul class="cs-bullets">
+          <li>Validation and clear error states improve trust and reduce user confusion.</li>
+          <li>Separation of API calls from rendering logic keeps maintenance simple.</li>
+          <li>Consistent UI states make the experience predictable across devices.</li>
+        </ul>
+
+        <h3 class="h5 mt-4 mb-2">Notes</h3>
+        <ul class="cs-bullets">
+          <li>Add screenshots of loading/error/success states</li>
+          <li>Add link to deployed demo if available</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span id="copyright-year"></span> <strong class="px-1 sitename">Kabiru Ahmad Dokoro</strong> — All Rights Reserved</p>
+      </div>
+      <div class="credits">Designed &amp; built by Kabiru Ahmad Dokoro</div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const el = document.getElementById('copyright-year');
+      if (el) el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>
