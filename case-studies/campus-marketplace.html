@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Project Overview: Campus Marketplace Platform | Kabiru Ahmad Dokoro</title>
-  <meta name="description" content="Project overview for Campus Marketplace Platform — Spring Boot + Thymeleaf + MySQL + Cloudinary." />
+  <title>Project Overview: UMT Campus Marketplace Platform | Kabiru Ahmad Dokoro</title>
+  <meta name="description" content="Project overview for UMT Campus Marketplace Platform — Spring Boot, Java, Spring Data JPA, Thymeleaf, MySQL (3NF), and Cloudinary." />
 
   <link href="../assets/img/AH$MART-LOGO.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -34,8 +34,8 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://github.com/" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/AhmadDokoro" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
       <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
     </div>
 
@@ -58,20 +58,20 @@
 
         <div class="cs-hero__grid">
           <div>
-            <h1 class="cs-title">Campus Marketplace Platform</h1>
-            <p class="cs-summary">A campus-first marketplace where users can list items, browse/search efficiently, and manage listings with role-based access.</p>
+            <h1 class="cs-title">UMT Campus Marketplace Platform</h1>
+            <p class="cs-summary">Student-to-student marketplace system with seller verification and secure transaction flow. A web-based marketplace built for Universiti Malaysia Terengganu (UMT) students to buy and sell items within campus, replacing informal WhatsApp and Telegram trading with a structured, verified, and traceable platform.</p>
 
             <div class="cs-badges" aria-label="Tech stack">
-              <span class="stack-badge">Java</span>
               <span class="stack-badge">Spring Boot</span>
+              <span class="stack-badge">Java</span>
               <span class="stack-badge">Spring Data JPA</span>
               <span class="stack-badge">Thymeleaf</span>
-              <span class="stack-badge">MySQL</span>
+              <span class="stack-badge">MySQL (3NF)</span>
               <span class="stack-badge">Cloudinary</span>
             </div>
 
             <div class="cs-actions">
-              <a class="btn btn-primary btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+              <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/Campus_MarketPlace_Platform.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
               <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
               <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
             </div>
@@ -86,8 +86,25 @@
 
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
+        <div class="cs-demo" style="border:2px solid #f59e0b; background:#fff8e1; border-radius:1rem; padding:1rem 1.25rem;">
+          <h2 class="cs-section-title mb-2"><i class="bi bi-key-fill"></i> Demo credentials (quick access)</h2>
+          <div class="cs-credentials" aria-label="Demo credentials">
+            <div><span class="cs-label">User Email:</span> demo@umt.edu.my</div>
+            <div><span class="cs-label">User Password:</span> Demo123</div>
+            <div><span class="cs-label">Seller Email:</span> Seller@umt.edu.my</div>
+            <div><span class="cs-label">Seller Password:</span> Seller123</div>
+            <div><span class="cs-label">Admin Email:</span> aisha@umt.edu.my</div>
+            <div><span class="cs-label">Admin Password:</span> secure123</div>
+          </div>
+          <p class="cs-note mb-0">Use these accounts to test user, seller, and admin workflows quickly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
         <h2 class="cs-section-title">Problem statement</h2>
-        <p class="cs-text">Students often need a safe, simple way to buy/sell items within their campus community. The goal is a marketplace where users can list items, browse/search quickly, and keep data consistent with a clean backend design.</p>
+        <p class="cs-text">UMT students currently trade through WhatsApp and Telegram groups. There is no structured system for tracking orders, verifying sellers, or preventing fraud. Transactions lack transparency and accountability. A campus-focused marketplace was needed to centralize and formalize student trading.</p>
       </div>
     </section>
 
@@ -97,10 +114,13 @@
         <div class="cs-two-col">
           <div>
             <ul class="cs-bullets">
-              <li>User authentication + role-based access (buyer/seller/admin).</li>
-              <li>Create/update/delete listings with image upload to Cloudinary.</li>
-              <li>Search, filters, and pagination for browsing items.</li>
-              <li>Relational modeling with clear ownership (seller → items) and validations.</li>
+              <li>Role-based access control (Buyer, Seller, Admin).</li>
+              <li>Admin-controlled seller verification workflow.</li>
+              <li>Product listing with image upload and status flagging.</li>
+              <li>Cart and order management system.</li>
+              <li>Payment tracking per order.</li>
+              <li>Order-based chat system between buyer and seller.</li>
+              <li>Fully normalized relational database (up to 3NF).</li>
             </ul>
           </div>
           <div>
@@ -116,64 +136,52 @@
         <figure class="cs-figure">
           <img src="../assets/img/portfolio/architecture-placeholder.svg" alt="Architecture diagram placeholder" loading="lazy">
         </figure>
+        <h3 class="h5 mt-3 mb-2">Architecture pattern</h3>
+        <p class="cs-text">Layered (Logical 3-Layer Architecture)</p>
+
+        <h3 class="h5 mt-3 mb-2">Layers</h3>
         <ul class="cs-bullets">
-          <li>Layered structure keeps controllers thin and business logic in services.</li>
-          <li>Repository layer isolates persistence, making features easier to test and change.</li>
-          <li>Cloudinary integration is handled as a service to keep uploads consistent and secure.</li>
-          <li>Pagination + filtering are handled at the query/service layer for performance.</li>
+          <li>Presentation Layer (Thymeleaf views + controllers).</li>
+          <li>Business Logic Layer (service classes).</li>
+          <li>Data Access Layer (repositories using JPA).</li>
+        </ul>
+
+        <h3 class="h5 mt-3 mb-2">Flow</h3>
+        <p class="cs-text">Client Request → Controller → Service → Repository → Database, then Database Response → Repository → Service → Controller → View.</p>
+
+        <h3 class="h5 mt-3 mb-2">Design decisions</h3>
+        <ul class="cs-bullets">
+          <li>Clear separation of concerns for maintainability.</li>
+          <li>Role-based logic handled at service layer.</li>
+          <li>Entity relationships mapped using JPA annotations.</li>
+          <li>Validation handled at controller and database levels.</li>
         </ul>
       </div>
     </section>
 
     <section class="section cs-block">
       <div class="container cs-container">
-        <h2 class="cs-section-title">Database design</h2>
-        <figure class="cs-figure">
-          <img src="../assets/img/portfolio/erd-placeholder.svg" alt="Entity relationship diagram placeholder" loading="lazy">
-        </figure>
-        <p class="cs-text">The schema models users, roles, and listings with clear ownership and constraints to protect data integrity (e.g., seller → items relationships and validation rules).</p>
+        <h2 class="cs-section-title">Database constraints &amp; validation</h2>
+        <p class="cs-text">The schema is fully normalized to Third Normal Form (3NF) to eliminate redundancy and enforce data integrity across users, products, carts, orders, payments, and chats.</p>
+        <ul class="cs-bullets">
+          <li>Unique email and academic ID.</li>
+          <li>Foreign key constraints across all transactional tables.</li>
+          <li>ENUM fields for role, order status, and payment status.</li>
+          <li>CHECK constraint for review rating (1–5).</li>
+          <li>Database fully normalized to Third Normal Form (3NF).</li>
+        </ul>
       </div>
     </section>
 
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
-        <h2 class="cs-section-title">Deployment &amp; hosting</h2>
+        <h2 class="cs-section-title">Engineering decisions &amp; lessons learned</h2>
         <ul class="cs-bullets">
-          <li>Docker: containerize the app for consistent builds across environments.</li>
-          <li>Hosting: deploy the container to a platform like Render (or similar).</li>
-          <li>Database: connect to MySQL/TiDB using environment-based configuration.</li>
-          <li>Environment variables: keep secrets out of code (DB URL, credentials, Cloudinary keys).</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section cs-block">
-      <div class="container cs-container">
-        <div class="cs-demo">
-          <h2 class="cs-section-title">Demo access</h2>
-          <div class="cs-credentials" aria-label="Demo credentials">
-            <div><span class="cs-label">Email:</span> demo@example.com</div>
-            <div><span class="cs-label">Password:</span> demo1234</div>
-          </div>
-          <p class="cs-note">Use the test account above to explore the app. Replace these with your real demo credentials when you deploy.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cs-block cs-block--alt">
-      <div class="container cs-container">
-        <h2 class="cs-section-title">Engineering decisions</h2>
-        <ul class="cs-bullets">
-          <li>Layered architecture to keep business rules maintainable and controllers lightweight.</li>
-          <li>Relational constraints + validations to prevent inconsistent marketplace data.</li>
-          <li>Service-based Cloudinary integration to centralize media handling and error cases.</li>
-        </ul>
-
-        <h3 class="h5 mt-4 mb-2">What to add next</h3>
-        <ul class="cs-bullets">
-          <li>Real screenshots (listing, search, admin view)</li>
-          <li>Deployment link (Render/Railway/VPS)</li>
-          <li>API endpoints table or OpenAPI screenshot</li>
+          <li>Selected layered architecture to maintain clean separation of concerns.</li>
+          <li>Used Spring Boot for rapid development and structured backend design.</li>
+          <li>Normalized database to 3NF to eliminate redundancy and enforce data integrity.</li>
+          <li>Implemented seller verification to strengthen trust and control marketplace access.</li>
+          <li>Refactored early database design after identifying incorrect dependency classification during normalization review.</li>
         </ul>
       </div>
     </section>

@@ -34,8 +34,8 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://github.com/" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/AhmadDokoro" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
       <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
     </div>
 
@@ -59,18 +59,21 @@
         <div class="cs-hero__grid">
           <div>
             <h1 class="cs-title">Attendance Management System</h1>
-            <p class="cs-summary">A database-backed attendance workflow built with JSP/Servlet and MySQL—designed to reduce manual errors and improve record keeping.</p>
+            <p class="cs-summary">QR-based web system for a secure lecturer–student attendance management. A web-based attendance platform built with Java (JSP/Servlet) and MySQL. Lecturers create sessions and generate dynamic QR codes for secure check-in. Students scan, submit attendance, and manage leave requests through dedicated dashboards.</p>
 
             <div class="cs-badges" aria-label="Tech stack">
-              <span class="stack-badge">Java</span>
-              <span class="stack-badge">JSP</span>
-              <span class="stack-badge">Servlets</span>
+              <span class="stack-badge">Java 17</span>
+              <span class="stack-badge">JSP &amp; Servlets</span>
+              <span class="stack-badge">Maven</span>
               <span class="stack-badge">MySQL</span>
+              <span class="stack-badge">Docker</span>
+              <span class="stack-badge">Render</span>
+              <span class="stack-badge">TiDB</span>
             </div>
 
             <div class="cs-actions">
-              <a class="btn btn-primary btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/Attendance-Management-System.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+              <a class="btn btn-outline btn-cta" href="https://attendance-management-system-1-38j8.onrender.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
               <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
             </div>
           </div>
@@ -84,20 +87,45 @@
 
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
-        <h2 class="cs-section-title">Problem statement</h2>
-        <p class="cs-text">Manual attendance is time-consuming and error-prone. This system streamlines class attendance with a simple workflow and a MySQL-backed log that can be reviewed and exported.</p>
+        <div class="cs-demo" style="border:2px solid #f59e0b; background:#fff8e1; border-radius:1rem; padding:1rem 1.25rem;">
+          <h2 class="cs-section-title mb-2"><i class="bi bi-key-fill"></i> Demo credentials (quick access)</h2>
+          <div class="cs-credentials" aria-label="Demo credentials">
+            <div><span class="cs-label">Lecturer Email:</span> noor.aini@umt.edu.my</div>
+            <div><span class="cs-label">Lecturer Password:</span> password123</div>
+            <div><span class="cs-label" style="opacity: 0.8; font-size: 0.9em; font-weight: normal;">(Check lecturer &#10004;)</span></div>
+            <div style="margin-top: 0.5rem;"><span class="cs-label">Student Email:</span> S72812</div>
+            <div><span class="cs-label">Student Password:</span> pass123</div>
+          </div>
+          <p class="cs-note mb-0 mt-2">(Demo credentials are for evaluation purposes only.)</p>
+        </div>
       </div>
     </section>
 
     <section class="section cs-block">
       <div class="container cs-container">
+        <h2 class="cs-section-title">Problem statement</h2>
+        <ul class="cs-bullets">
+          <li>Manual attendance tracking is time-consuming and prone to errors.</li>
+          <li>Static QR codes can be shared, allowing proxy attendance.</li>
+          <li>There was no centralized workflow for leave requests and approval.</li>
+          <li>The system addresses these gaps with secure session-based tracking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cs-block cs-block--alt">
+      <div class="container cs-container">
         <h2 class="cs-section-title">Key features</h2>
         <div class="cs-two-col">
           <div>
             <ul class="cs-bullets">
-              <li>Role-based login (lecturer/admin/student).</li>
-              <li>Create sessions and record attendance entries.</li>
-              <li>Attendance logs with filtering and basic reporting.</li>
+              <li>Dynamic QR code generation per session</li>
+              <li>Duplicate scan prevention</li>
+              <li>Role-based dashboards (Lecturer / Student)</li>
+              <li>Manual attendance override for absentees</li>
+              <li>Leave request submission with image upload</li>
+              <li>Leave approval / rejection workflow</li>
+              <li>Session-level attendance reporting</li>
             </ul>
           </div>
           <div>
@@ -107,67 +135,37 @@
       </div>
     </section>
 
-    <section class="section cs-block cs-block--alt">
+    <section class="section cs-block">
       <div class="container cs-container">
         <h2 class="cs-section-title">System architecture</h2>
-        <figure class="cs-figure">
-          <img src="../assets/img/portfolio/architecture-placeholder.svg" alt="Architecture diagram placeholder" loading="lazy">
-        </figure>
-        <ul class="cs-bullets">
-          <li>MVC-style separation between views (JSP), controllers (Servlets), and persistence logic.</li>
-          <li>Database-backed logs provide a single source of truth for reporting/export.</li>
-          <li>Validation logic prevents common issues (e.g., duplicates and invalid sessions).</li>
-        </ul>
-      </div>
-    </section>
+        <h3 class="h5 mt-3 mb-2">Architecture pattern</h3>
+        <p class="cs-text">Layered MVC architecture</p>
 
-    <section class="section cs-block">
-      <div class="container cs-container">
-        <h2 class="cs-section-title">Database design</h2>
-        <figure class="cs-figure">
-          <img src="../assets/img/portfolio/erd-placeholder.svg" alt="Entity relationship diagram placeholder" loading="lazy">
-        </figure>
-        <p class="cs-text">A relational schema stores users, sessions, and attendance entries with constraints to protect integrity and keep reporting simple.</p>
+        <h3 class="h5 mt-3 mb-2">Flow</h3>
+        <p class="cs-text">JSP (View) &rarr; Servlet (Controller) &rarr; DAO (Repository) &rarr; MySQL</p>
+
+        <h3 class="h5 mt-3 mb-2">Controller Layer</h3>
+        <ul class="cs-bullets">
+          <li>Handles HTTP requests</li>
+          <li>Validates input</li>
+          <li>Delegates to DAO</li>
+        </ul>
+
+        <h3 class="h5 mt-3 mb-2">Repository Layer (DAO)</h3>
+        <ul class="cs-bullets">
+          <li>Executes SQL queries</li>
+          <li>Manages database connections</li>
+        </ul>
       </div>
     </section>
 
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
-        <h2 class="cs-section-title">Deployment &amp; hosting</h2>
+        <h2 class="cs-section-title">Engineering decisions &amp; lessons learned</h2>
         <ul class="cs-bullets">
-          <li>Package the app and configure DB connection using environment variables.</li>
-          <li>Deploy to a hosting provider or university server environment.</li>
-          <li>Use Docker optionally for consistent runtime configuration across machines.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section cs-block">
-      <div class="container cs-container">
-        <div class="cs-demo">
-          <h2 class="cs-section-title">Demo access</h2>
-          <div class="cs-credentials" aria-label="Demo credentials">
-            <div><span class="cs-label">Email:</span> demo@example.com</div>
-            <div><span class="cs-label">Password:</span> demo1234</div>
-          </div>
-          <p class="cs-note">Use the test credentials above for demo access. Replace these when you deploy a live version.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cs-block cs-block--alt">
-      <div class="container cs-container">
-        <h2 class="cs-section-title">Engineering decisions</h2>
-        <ul class="cs-bullets">
-          <li>Simple role-based flows keep the UI and database operations predictable.</li>
-          <li>MySQL-backed logs make reporting/export reliable and auditable.</li>
-          <li>Validation at write-time prevents duplicate or inconsistent attendance entries.</li>
-        </ul>
-
-        <h3 class="h5 mt-4 mb-2">Notes</h3>
-        <ul class="cs-bullets">
-          <li>Add screenshots (login, lecturer dashboard, logs)</li>
-          <li>Add deployment details or run instructions</li>
+          <li>Chose layered MVC for clarity and maintainability.</li>
+          <li>Used Servlets instead of a full framework to strengthen core Java EE understanding.</li>
+          <li>Implemented dynamic QR refresh to prevent attendance spoofing.</li>
         </ul>
       </div>
     </section>

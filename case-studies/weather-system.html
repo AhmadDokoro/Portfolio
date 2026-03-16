@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Project Overview: Weather System | Kabiru Ahmad Dokoro</title>
-  <meta name="description" content="Project overview for Node.js Weather System — API integration and reliability." />
+  <title>Project Overview: WanderLite Smart Tourism Dashboard | Kabiru Ahmad Dokoro</title>
+  <meta name="description" content="Project overview for WanderLite Smart Tourism Dashboard — real-time weather, currency exchange, and nearby attractions with interactive maps." />
 
   <link href="../assets/img/AH$MART-LOGO.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -34,8 +34,8 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://github.com/" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/AhmadDokoro" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
       <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
     </div>
 
@@ -58,18 +58,25 @@
 
         <div class="cs-hero__grid">
           <div>
-            <h1 class="cs-title">Node.js Weather System</h1>
-            <p class="cs-summary">A lightweight project focused on API integration, input validation, and reliable UX states (loading, success, error).</p>
+            <h1 class="cs-title">WanderLite Smart Tourism Dashboard</h1>
+            <p class="cs-summary">A real-time tourism dashboard that combines weather, currency exchange, and nearby attractions in one experience. WanderLite helps users quickly explore any city by viewing live weather conditions, current exchange rates, and nearby attractions on an interactive map.</p>
 
             <div class="cs-badges" aria-label="Tech stack">
               <span class="stack-badge">Node.js</span>
-              <span class="stack-badge">HTTP</span>
-              <span class="stack-badge">API integration</span>
+              <span class="stack-badge">Express.js</span>
+              <span class="stack-badge">JavaScript (CommonJS)</span>
+              <span class="stack-badge">HTML/CSS</span>
+              <span class="stack-badge">Vanilla JavaScript</span>
+              <span class="stack-badge">Leaflet.js</span>
+              <span class="stack-badge">OpenWeather API</span>
+              <span class="stack-badge">Frankfurter API</span>
+              <span class="stack-badge">Geoapify Places API</span>
+              <span class="stack-badge">Overpass API (Fallback)</span>
             </div>
 
             <div class="cs-actions">
-              <a class="btn btn-primary btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/weather-tourism-dashboard.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+              <a class="btn btn-outline btn-cta" href="https://weather-tourism-dashboard.onrender.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
               <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
             </div>
           </div>
@@ -84,7 +91,7 @@
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
         <h2 class="cs-section-title">Problem statement</h2>
-        <p class="cs-text">Users want quick, accurate weather results. The app must handle invalid input and network failures gracefully while remaining fast and simple.</p>
+        <p class="cs-text">Travelers usually switch between multiple apps/tabs for weather, currency conversion, and places to visit. This creates friction and slows trip planning. WanderLite solves this by aggregating essential travel intelligence into one unified dashboard with real-time updates and map-based visualization.</p>
       </div>
     </section>
 
@@ -94,9 +101,12 @@
         <div class="cs-two-col">
           <div>
             <ul class="cs-bullets">
-              <li>Calls a public weather API and renders results cleanly.</li>
-              <li>Input validation and clear error states for user confidence.</li>
-              <li>Separation of concerns for maintainability.</li>
+              <li>City-based weather insights (temperature, humidity, wind, pressure, sunrise/sunset).</li>
+              <li>Live currency conversion between major currencies.</li>
+              <li>Nearby attraction discovery by category (sights, museums, parks, entertainment, restaurants).</li>
+              <li>Interactive map with attraction markers and quick navigation actions.</li>
+              <li>Bright, modern, responsive UI with icon-rich navigation.</li>
+              <li>No authentication required (open public access).</li>
             </ul>
           </div>
           <div>
@@ -109,21 +119,48 @@
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
         <h2 class="cs-section-title">System architecture</h2>
-        <figure class="cs-figure">
-          <img src="../assets/img/portfolio/architecture-placeholder.svg" alt="Architecture diagram placeholder" loading="lazy">
-        </figure>
+        <h3 class="h5 mt-3 mb-2">Architecture pattern</h3>
+        <p class="cs-text">Lightweight Layered Web Architecture.</p>
+
+        <h3 class="h5 mt-3 mb-2">Layers</h3>
         <ul class="cs-bullets">
-          <li>Request handler validates input before calling the external API.</li>
-          <li>Service module isolates API calls and error handling.</li>
-          <li>UI renders consistent states (loading/success/error) for better UX.</li>
+          <li>Presentation layer: static pages (HTML/CSS/JS) + client-side rendering.</li>
+          <li>Application layer: Express route handlers and response shaping.</li>
+          <li>Integration layer: external API connectors (weather, exchange, places).</li>
+        </ul>
+
+        <h3 class="h5 mt-3 mb-2">Flow</h3>
+        <p class="cs-text">Client Request → Express Route → External API(s) → Normalized JSON Response → UI Rendering.</p>
+
+        <h3 class="h5 mt-3 mb-2">Design decisions</h3>
+        <ul class="cs-bullets">
+          <li>Moved API keys and third-party calls to backend routes for security.</li>
+          <li>Added standardized API responses for frontend consistency.</li>
+          <li>Implemented fallback provider logic for attraction reliability.</li>
+          <li>Centralized styling into a shared design system (<code>app.css</code>) for maintainability.</li>
+        </ul>
+
+        <h3 class="h5 mt-3 mb-2">Data and request shaping</h3>
+        <ul class="cs-bullets">
+          <li>One city query → one weather payload + one coordinate pair.</li>
+          <li>One coordinate pair → many attractions.</li>
+          <li>One conversion request → one exchange result.</li>
         </ul>
       </div>
     </section>
 
     <section class="section cs-block">
       <div class="container cs-container">
-        <h2 class="cs-section-title">Database design</h2>
-        <p class="cs-text">This project is stateless and does not require a database. If persistence is added later (e.g., favorites/history), an ERD can be included here.</p>
+        <h2 class="cs-section-title">Database</h2>
+        <p class="cs-text">None (API-driven dashboard).</p>
+
+        <h3 class="h5 mt-3 mb-2">Validation &amp; constraints</h3>
+        <ul class="cs-bullets">
+          <li>Required query params (<code>city</code>, <code>from</code>, <code>to</code>, <code>amount</code>, <code>lat</code>, <code>lon</code>).</li>
+          <li>Numeric validation for coordinates and amount.</li>
+          <li>Graceful error payloads for upstream API failures.</li>
+          <li>Provider fallback when Geoapify key is missing or invalid.</li>
+        </ul>
       </div>
     </section>
 
@@ -131,9 +168,9 @@
       <div class="container cs-container">
         <h2 class="cs-section-title">Deployment &amp; hosting</h2>
         <ul class="cs-bullets">
-          <li>Deploy the Node app to a platform like Render (or similar) for quick demo access.</li>
-          <li>Use environment variables for API keys and base URLs.</li>
-          <li>Add request timeouts and rate-limit handling for reliability.</li>
+          <li>Deployed on Render.</li>
+          <li>Runs locally via Node runtime (<code>npm start</code>).</li>
+          <li>Render-compatible Express setup.</li>
         </ul>
       </div>
     </section>
@@ -143,10 +180,12 @@
         <div class="cs-demo">
           <h2 class="cs-section-title">Demo access</h2>
           <div class="cs-credentials" aria-label="Demo credentials">
-            <div><span class="cs-label">URL:</span> https://example-demo-url.com</div>
-            <div><span class="cs-label">Note:</span> No login required</div>
+            <div><span class="cs-label">Access Model:</span> Public dashboard (no login required)</div>
+            <div><span class="cs-label">Run locally:</span> npm install</div>
+            <div><span class="cs-label">Then:</span> npm start</div>
+            <div><span class="cs-label">Open:</span> http://localhost:3000</div>
           </div>
-          <p class="cs-note">Replace the demo URL above once you deploy this project. This app is public-facing and typically does not require credentials.</p>
+          <p class="cs-note">Visitors can use the live public dashboard directly; no authentication is required.</p>
         </div>
       </div>
     </section>
@@ -155,15 +194,10 @@
       <div class="container cs-container">
         <h2 class="cs-section-title">Engineering decisions</h2>
         <ul class="cs-bullets">
-          <li>Validation and clear error states improve trust and reduce user confusion.</li>
-          <li>Separation of API calls from rendering logic keeps maintenance simple.</li>
-          <li>Consistent UI states make the experience predictable across devices.</li>
-        </ul>
-
-        <h3 class="h5 mt-4 mb-2">Notes</h3>
-        <ul class="cs-bullets">
-          <li>Add screenshots of loading/error/success states</li>
-          <li>Add link to deployed demo if available</li>
+          <li>Backend routes were used to protect API keys and hide provider implementation details.</li>
+          <li>A normalized response contract simplified frontend rendering logic.</li>
+          <li>Fallback provider logic reduced failure rates for attraction search.</li>
+          <li>A centralized styling system improved consistency and maintainability.</li>
         </ul>
       </div>
     </section>
