@@ -30,7 +30,7 @@
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 
   /* Extended tokens used by custom overrides */
-  --muted-color: #475569; /* Slate-600 */
+  --muted-color: #334155; /* Slate-700 for better WCAG contrast */
   --border-color: #e2e8f0; /* Slate-200 */
   --accent-2: #0ea5e9; /* Sky-500 */
   --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.06);
@@ -323,6 +323,7 @@ h6 {
   white-space: nowrap;
   transition: 0.3s;
   width: 100%;
+  border-left: 4px solid transparent;
 }
 
 /* Make nav links feel like consistent components */
@@ -335,6 +336,7 @@ h6 {
 .navmenu .active,
 .navmenu .active:focus {
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-left-color: var(--accent-color);
 }
 
 .navmenu a .navicon,
@@ -657,6 +659,7 @@ section[id],
 
 #about .about-prose p {
   color: color-mix(in srgb, var(--default-color), transparent 22%);
+  line-height: 1.65;
 }
 
 #about .about-callout {
@@ -947,6 +950,13 @@ section[id],
   color: color-mix(in srgb, var(--default-color), black 6%);
   background: color-mix(in srgb, var(--skill-a, var(--accent-color)), white 90%);
   border: 1px solid color-mix(in srgb, var(--skill-a, var(--accent-color)), transparent 72%);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+#skills .skill-pill:hover {
+  background: color-mix(in srgb, var(--skill-a, var(--accent-color)), white 80%);
+  color: color-mix(in srgb, var(--default-color), black 20%);
 }
 
 #skills .skill-pill--strong {
@@ -1311,6 +1321,11 @@ section[id],
   object-fit: cover;
   display: block;
   border-bottom: 1px solid var(--border-color);
+  transition: transform 0.4s ease;
+}
+
+.project-card--v2:hover .project-card__img {
+  transform: scale(1.05);
 }
 
 .project-card--v2 .project-card__content {
@@ -1327,7 +1342,7 @@ section[id],
 .project-card--v2 .project-card__summary {
   margin-bottom: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 28%);
-  line-height: 1.55;
+  line-height: 1.65;
   max-width: 70ch;
 }
 
@@ -1348,6 +1363,14 @@ section[id],
   color: color-mix(in srgb, var(--default-color), black 6%);
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.project-card--v2 .stack-badge:hover {
+  background: #f1f5f9;
+  border-color: var(--accent-color);
+  color: #0f172a;
 }
 
 .project-card--v2 .project-card__impact {
@@ -1356,7 +1379,7 @@ section[id],
   display: grid;
   gap: 8px;
   color: var(--muted-color);
-  line-height: 1.55;
+  line-height: 1.65;
 }
 
 .project-card--v2 .project-card__actions {
