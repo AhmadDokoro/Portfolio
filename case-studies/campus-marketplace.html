@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Project Overview: UMT Campus Marketplace Platform | Kabiru Ahmad Dokoro</title>
-  <meta name="description" content="Project overview for UMT Campus Marketplace Platform — Spring Boot, Java, Spring Data JPA, Thymeleaf, MySQL (3NF), and Cloudinary." />
+  <meta name="description" content="Project overview for UMT Campus Marketplace Platform - Spring Boot, Java, Spring Data JPA, Thymeleaf, MySQL (3NF), Cloudinary, and live deployment on DigitalOcean VPS." />
 
   <link href="../assets/img/AH$MART-LOGO.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -59,7 +59,7 @@
         <div class="cs-hero__grid">
           <div>
             <h1 class="cs-title">UMT Campus Marketplace Platform</h1>
-            <p class="cs-summary">Student-to-student marketplace system with seller verification and secure transaction flow. A web-based marketplace built for Universiti Malaysia Terengganu (UMT) students to buy and sell items within campus, replacing informal WhatsApp and Telegram trading with a structured, verified, and traceable platform.</p>
+            <p class="cs-summary">Student-to-student marketplace system with seller verification and secure transaction flow. A web-based marketplace built for Universiti Malaysia Terengganu (UMT) students to buy and sell items within campus, replacing informal WhatsApp and Telegram trading with a structured, verified, and traceable platform. The project is now publicly accessible at <a href="https://umtmarket.ahsmart.dev/" target="_blank" rel="noopener noreferrer">umtmarket.ahsmart.dev</a>, with both the application and database hosted on a DigitalOcean VPS.</p>
 
             <div class="cs-badges" aria-label="Tech stack">
               <span class="stack-badge">Spring Boot</span>
@@ -68,11 +68,12 @@
               <span class="stack-badge">Thymeleaf</span>
               <span class="stack-badge">MySQL (3NF)</span>
               <span class="stack-badge">Cloudinary</span>
+              <span class="stack-badge">DigitalOcean VPS</span>
             </div>
 
             <div class="cs-actions">
               <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/Campus_MarketPlace_Platform.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-              <a class="btn btn-outline btn-cta" href="#" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+              <a class="btn btn-outline btn-cta" href="https://umtmarket.ahsmart.dev/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
               <a class="btn btn-outline btn-cta" href="../portfolio.html"><i class="bi bi-arrow-left"></i> Back to projects</a>
             </div>
           </div>
@@ -87,8 +88,10 @@
     <section class="section cs-block cs-block--alt">
       <div class="container cs-container">
         <div class="cs-demo" style="border:2px solid #f59e0b; background:#fff8e1; border-radius:1rem; padding:1rem 1.25rem;">
-          <h2 class="cs-section-title mb-2"><i class="bi bi-key-fill"></i> Demo credentials (quick access)</h2>
+          <h2 class="cs-section-title mb-2"><i class="bi bi-key-fill"></i> Live demo &amp; credentials</h2>
           <div class="cs-credentials" aria-label="Demo credentials">
+            <div><span class="cs-label">Live URL:</span> <a href="https://umtmarket.ahsmart.dev/" target="_blank" rel="noopener noreferrer">https://umtmarket.ahsmart.dev/</a></div>
+            <div><span class="cs-label">Hosting:</span> DigitalOcean VPS (application + database)</div>
             <div><span class="cs-label">User Email:</span> demo@umt.edu.my</div>
             <div><span class="cs-label">User Password:</span> Demo123</div>
             <div><span class="cs-label">Seller Email:</span> Seller@umt.edu.my</div>
@@ -96,8 +99,21 @@
             <div><span class="cs-label">Admin Email:</span> aisha@umt.edu.my</div>
             <div><span class="cs-label">Admin Password:</span> secure123</div>
           </div>
-          <p class="cs-note mb-0">Use these accounts to test user, seller, and admin workflows quickly.</p>
+          <p class="cs-note mb-0">Use the live link and these accounts to test user, seller, and admin workflows quickly.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section cs-block">
+      <div class="container cs-container">
+        <h2 class="cs-section-title">Production deployment</h2>
+        <p class="cs-text">The platform is deployed as a live production demo for portfolio review and real user-flow testing. Hosting both the Spring Boot application and the MySQL database on a DigitalOcean VPS helped validate the project beyond local development and demonstrate hands-on deployment experience.</p>
+        <ul class="cs-bullets">
+          <li>Live demo available at <a href="https://umtmarket.ahsmart.dev/" target="_blank" rel="noopener noreferrer">umtmarket.ahsmart.dev</a>.</li>
+          <li>Application and database hosted on DigitalOcean VPS infrastructure.</li>
+          <li>Public domain setup makes the project directly accessible for recruiters, testers, and reviewers.</li>
+          <li>Deployment reflects practical experience with moving a full web application into a hosted environment.</li>
+        </ul>
       </div>
     </section>
 
@@ -120,6 +136,7 @@
               <li>Cart and order management system.</li>
               <li>Payment tracking per order.</li>
               <li>Order-based chat system between buyer and seller.</li>
+              <li>Live production deployment on DigitalOcean VPS with public domain access.</li>
               <li>Fully normalized relational database (up to 3NF).</li>
             </ul>
           </div>
@@ -181,6 +198,7 @@
           <li>Used Spring Boot for rapid development and structured backend design.</li>
           <li>Normalized database to 3NF to eliminate redundancy and enforce data integrity.</li>
           <li>Implemented seller verification to strengthen trust and control marketplace access.</li>
+          <li>Deployed both the application and database to a DigitalOcean VPS to prove the system in a real hosted environment.</li>
           <li>Refactored early database design after identifying incorrect dependency classification during normalization review.</li>
         </ul>
       </div>
