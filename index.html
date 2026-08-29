@@ -3,507 +3,408 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Kabiru Ahmad Dokoro | Portfolio</title>
-  <meta content="Kabiru Ahmad Dokoro — Java Backend Developer (Intern). Spring Boot, REST APIs, MySQL. Based in Malaysia." name="description">
-  <meta content="Java, Spring Boot, backend internship, REST API, MySQL, Malaysia, portfolio" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kabiru Ahmad Dokoro | Software Engineer</title>
+  <meta name="description" content="Kabiru Ahmad Dokoro — Full-Stack Software Engineer. Building end-to-end systems with Java, Spring Boot, React, Node.js, and cloud infrastructure. Dean's List scholar.">
+  <meta name="keywords" content="Java, Spring Boot, React, Node.js, Full-Stack, Software Engineer, REST API, MySQL, Docker, portfolio, Kabiru Ahmad Dokoro">
 
   <!-- Favicons -->
   <link href="assets/img/AH$MART-LOGO.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Styles -->
+  <link href="assets/css/redesign.css" rel="stylesheet">
 </head>
 
-<body class="index-page page-wrap">
+<body>
 
-  <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">K<span>.</span>A<span>.</span>D</a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-    <div class="profile-img">
-      <img src="assets/img/Ahmad.jpg" alt="Kabiru Ahmad Dokoro" class="img-fluid rounded-4">
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- Breathing orbs -->
+    <div class="orb orb--purple-lg" style="top:-20%;left:-10%;animation:orbFloat1 12s ease-in-out infinite"></div>
+    <div class="orb orb--cyan-lg" style="bottom:-20%;right:-10%;animation:orbFloat2 15s ease-in-out infinite"></div>
+    <div class="orb orb--purple-md" style="top:40%;left:50%;animation:breathe 8s ease-in-out infinite"></div>
+    <!-- Grid + scanline -->
+    <div class="grid-overlay"></div>
+    <div class="scanline"></div>
+
+    <div class="hero__inner">
+      <!-- Text -->
+      <div class="hero__text">
+        <div class="hero__label">// full_stack_engineer</div>
+        <h1 class="hero__name">
+          KABIRU<br>
+          <span class="gradient-name">AHMAD</span><br>
+          DOKORO
+        </h1>
+        <p class="hero__tagline">Full-stack engineer who ships end-to-end. Java & Spring Boot backends, React frontends, cloud deployments — from database to pixel.</p>
+        <div class="hero__buttons">
+          <a href="assets/docs/resume.pdf" class="btn-gradient" target="_blank" rel="noopener noreferrer">DOWNLOAD RESUME</a>
+          <a href="https://github.com/AhmadDokoro" class="btn-ghost-purple" target="_blank" rel="noopener noreferrer">GITHUB</a>
+          <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" class="btn-ghost-cyan" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        </div>
+        <div class="hero__location">
+          <span>&#x1F4CD; Malaysia</span>
+          <span>&#x1F1F3;&#x1F1EC; Nigerian</span>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="hero__photo-wrap">
+        <div class="hero__photo-border"></div>
+        <div class="hero__photo">
+          <img src="assets/img/Ahmad.jpg" alt="Kabiru Ahmad Dokoro" loading="eager">
+          <div class="hero__photo-fade"></div>
+          <div class="hero__photo-tint"></div>
+        </div>
+        <div class="hero__badge">
+          <div class="hero__badge-label">status:</div>
+          <div class="hero__badge-value">Open to opportunities</div>
+        </div>
+      </div>
     </div>
-    <a href="#hero" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">Kabiru Ahmad Dokoro</h1>
-    </a>
-    <div class="social-links text-center">
-      <a href="https://github.com/AhmadDokoro" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
-      <a href="mailto:ahmadkabirudokoro@gmail.com" class="email" aria-label="Email Kabiru"><i class="bi bi-envelope"></i></a>
-    </div>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i>About</a></li>
-        <li><a href="#skills"><i class="bi bi-lightning-charge navicon"></i>Skills</a></li>
-        <li><a href="#projects"><i class="bi bi-kanban navicon"></i>Projects</a></li>
-        <li><a href="#education"><i class="bi bi-mortarboard navicon"></i>Education</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
-        <li><a href="portfolio.html"><i class="bi bi-images navicon"></i>All Projects</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-  <main id="main-content" class="main" tabindex="-1">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background hero-clean d-flex align-items-center justify-content-center">
-      <img src="assets/img/me2.jpeg" alt="Abstract background" class="hero-bg" loading="eager">
-      <div class="container position-relative">
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-8">
-            <p class="hero-role mb-2">Backend Developer (Intern) </p>
-            <h1 class="hero-title mb-3" aria-label="AH$MART">
-              <span class="hero-brand hero-brand--ah">AH</span><span class="hero-dollar">$</span><span class="hero-brand hero-brand--mart">MART</span>
-            </h1>
-            <p class="hero-summary mb-4">I build backend systems with Spring Boot and connect them to MySQL. <br/>Can't wait to learn, contribute and grow in a real-world environment.</p>
-
-            <div class="d-flex flex-wrap gap-2">
-              <a class="btn btn-primary btn-cta" href="assets/docs/resume.pdf" download>
-                <i class="bi bi-file-earmark-arrow-down"></i> Download Resume
-              </a>
-              <a class="btn btn-outline-light btn-cta" href="https://github.com/AhmadDokoro" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-github"></i> GitHub
-              </a>
-              <a class="btn btn-outline-light btn-cta" href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-linkedin"></i> LinkedIn
-              </a>
-              <a class="btn btn-outline-light btn-cta" href="#projects">
-                <i class="bi bi-arrow-down-right-circle"></i> View Projects
-              </a>
-            </div>
-
-            <div class="quick-facts mt-3">
-              <span class="fact"><i class="bi bi-geo-alt"></i> Malaysia (current)</span>
-              <span class="fact"><i class="bi bi-globe"></i> Nigerian</span>
-              <span class="fact"><i class="bi bi-check2-circle"></i> Open to Java/Spring Boot internships</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Hero Section -->
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker"><i class="bi bi-person"></i> About</span>
-          <h2>Backend developer, clean engineering</h2>
-          <p class="section-lead">Final-year Software Engineering student focused on building structured backend systems with Java, Spring Boot, and MySQL.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-7">
-            <div class="card-soft p-4 about-card about-prose">
-              <p class="about-lead mb-3">I am a final-year Software Engineering student at <strong>Universiti Malaysia Terengganu</strong>, specializing in backend development using <strong>Java</strong> and <strong>Spring Boot</strong>.</p>
-
-              <p class="mb-3">I build structured backend systems using layered architecture (Controller–Service–Repository) and apply MVC principles in both Spring Boot and traditional Java (JSP &amp; Servlets). My experience includes designing RESTful APIs, integrating relational databases with MySQL, and implementing clean separation of concerns in application design.</p>
-
-              <p class="mb-3">I developed a <strong>Campus Marketplace Platform</strong> as part of my final-year project, focusing on scalable backend architecture, database design, and real-world deployment practices. The platform is now live at <a href="https://umtmarket.ahsmart.dev/" target="_blank" rel="noopener noreferrer">umtmarket.ahsmart.dev</a>, with both the application and database hosted on a DigitalOcean VPS. I also work with Node.js and Express.js, integrate third-party services such as Cloudinary for media management, and deploy containerized applications using Docker to platforms like Render and TiDB.</p>
-
-              <div class="about-callout mt-4" role="note">
-                <div class="about-callout__title"><i class="bi bi-bullseye"></i> Internship goal</div>
-                <p class="mb-0">I am seeking a backend or software engineering internship where I can contribute to production-level systems and continue advancing my engineering skills.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="card-soft p-4 about-card">
-              <h3 class="h5 mb-3">Highlights</h3>
-
-              <ul class="about-list mb-4">
-                <li><i class="bi bi-mortarboard"></i><span><strong>University:</strong> Universiti Malaysia Terengganu</span></li>
-                <li><i class="bi bi-layers"></i><span><strong>Architecture:</strong> Controller → Service → Repository</span></li>
-                <li><i class="bi bi-diagram-2"></i><span><strong>Patterns:</strong> MVC (Spring Boot + JSP/Servlet)</span></li>
-                <li><i class="bi bi-braces-asterisk"></i><span><strong>APIs:</strong> RESTful API design &amp; integration</span></li>
-                <li><i class="bi bi-database"></i><span><strong>Database:</strong> MySQL + relational design</span></li>
-                <li><i class="bi bi-box"></i><span><strong>Deploy:</strong> DigitalOcean VPS • Docker • Render • TiDB</span></li>
-                <li><i class="bi bi-cloud"></i><span><strong>Services:</strong> Cloudinary for media management</span></li>
-              </ul>
-
-              <div class="about-mini">
-                <div class="about-mini__kicker">Final-year project</div>
-                <div class="about-mini__title">Campus Marketplace Platform</div>
-                <p class="about-mini__text mb-0">Built with scalable backend architecture, solid database design, and a live production deployment on DigitalOcean VPS.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section light-background">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker"><i class="bi bi-lightning-charge"></i> Skills</span>
-          <h2>Technologies I use</h2>
-          <p class="section-lead">A focused stack for backend internship work: Spring Boot, REST APIs, and MySQL—supported by practical tools for shipping features.</p>
-        </div>
-
-        <div class="row g-4 skills-categories">
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#a855f7;--skill-b:#ec4899;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-server"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Backend Development</h3>
-                  <p class="skill-sub mb-0">APIs, MVC, and server-side rendering</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill skill-pill--strong">Java</span>
-                <span class="skill-pill">Spring Boot</span>
-                <span class="skill-pill">Spring Data JPA (Hibernate)</span>
-                <span class="skill-pill">RESTful API Development</span>
-                <span class="skill-pill">FastAPI</span>
-                <span class="skill-pill">JSP &amp; Servlets (Java MVC)</span>
-                <span class="skill-pill">Thymeleaf (SSR)</span>
-                <span class="skill-pill">Node.js</span>
-                <span class="skill-pill">Express.js</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#6366f1;--skill-b:#22d3ee;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Architecture &amp; Design</h3>
-                  <p class="skill-sub mb-0">Structure that stays clean as you scale</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill">Layered Architecture (Controller → Service → Repository)</span>
-                <span class="skill-pill">MVC Pattern</span>
-                <span class="skill-pill">Entity Relationship Design (ERD → Implementation)</span>
-                <span class="skill-pill">Clean Separation of Concerns</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#06b6d4;--skill-b:#60a5fa;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-database"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Database</h3>
-                  <p class="skill-sub mb-0">Relational modeling + practical SQL</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill skill-pill--strong">MySQL</span>
-                <span class="skill-pill">SQL (Joins, CRUD)</span>
-                <span class="skill-pill">Basic Indexing</span>
-                <span class="skill-pill">Relational Database Design</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#f97316;--skill-b:#facc15;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-boxes"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Deployment &amp; DevOps</h3>
-                  <p class="skill-sub mb-0">Ship, debug, and host with confidence</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill">Docker</span>
-                <span class="skill-pill">Git &amp; GitHub</span>
-                <span class="skill-pill">Postman</span>
-                <span class="skill-pill">Hosting: Render</span>
-                <span class="skill-pill">TiDB (Cloud DB)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#22c55e;--skill-b:#84cc16;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-plug"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Integration &amp; Services</h3>
-                  <p class="skill-sub mb-0">Connecting apps to real-world tools</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill">Cloudinary (Image Storage)</span>
-                <span class="skill-pill">Image Management Integration</span>
-                <span class="skill-pill">REST API Integration</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#ef4444;--skill-b:#fb7185;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Testing</h3>
-                  <p class="skill-sub mb-0">Basics that prevent regressions</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill">JUnit</span>
-                <span class="skill-pill">Basic Unit Testing Concepts</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="card-soft p-4 h-100 skill-card" style="--skill-a:#0ea5e9;--skill-b:#6366f1;">
-              <div class="skill-card__head">
-                <span class="skill-icon" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
-                <div>
-                  <h3 class="h5 mb-1">Languages &amp; Web</h3>
-                  <p class="skill-sub mb-0">Daily drivers + practical fundamentals</p>
-                </div>
-              </div>
-              <div class="skill-pills mt-3">
-                <span class="skill-pill skill-pill--strong">Java (Primary)</span>
-                <span class="skill-pill">JavaScript</span>
-                <span class="skill-pill">Python (Basic)</span>
-                <span class="skill-pill">HTML &amp; CSS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker"><i class="bi bi-kanban"></i> Projects</span>
-          <h2>Selected work</h2>
-          <p class="section-lead">A few projects that highlight backend fundamentals: database design, CRUD workflows, and API-first thinking.</p>
-        </div>
-
-        <div class="projects-grid" aria-label="Project cards">
-          <article class="card-soft project-card project-card--v2">
-            <img class="project-card__img" src="assets/img/CMP.jpeg" alt="Campus Marketplace Platform preview screenshot" loading="lazy">
-            <div class="project-card__content">
-              <h3 class="project-card__title">UMT Campus Marketplace Platform</h3>
-              <p class="project-card__summary">Student-to-student marketplace system with seller verification, secure transaction flow, and live production hosting on DigitalOcean VPS.</p>
-
-              <div class="project-card__stack" aria-label="Tech stack">
-                <span class="stack-badge">Spring Boot</span>
-                <span class="stack-badge">Java</span>
-                <span class="stack-badge">Spring Data JPA</span>
-                <span class="stack-badge">Thymeleaf</span>
-                <span class="stack-badge">MySQL (3NF)</span>
-                <span class="stack-badge">Cloudinary</span>
-                <span class="stack-badge">DigitalOcean VPS</span>
-              </div>
-
-              <ul class="project-card__impact" aria-label="Key outcomes">
-                <li>Role-based access with admin-controlled seller verification (Buyer, Seller, Admin).</li>
-                <li>Product listing, cart, order, payment tracking, and buyer-seller order chat flow.</li>
-                <li>Live at umtmarket.ahsmart.dev with both the application and MySQL database hosted on a DigitalOcean VPS. (open project overview for credentials)</li>
-                <li>Fully normalized relational schema (3NF) with strict integrity and validation constraints.</li>
-              </ul>
-
-              <div class="project-card__actions">
-                <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/Campus_MarketPlace_Platform.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-                <a class="btn btn-outline btn-cta" href="https://umtmarket.ahsmart.dev/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                <a class="btn btn-outline btn-cta" href="case-studies/campus-marketplace.html"><i class="bi bi-file-text"></i> Project Overview</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card-soft project-card project-card--v2">
-            <img class="project-card__img" src="assets/img/AMS.jpeg" alt="Attendance Management System preview screenshot" loading="lazy">
-            <div class="project-card__content">
-              <h3 class="project-card__title">Attendance Management System</h3>
-              <p class="project-card__summary">Streamlines class attendance with role-based workflows and export-friendly records.</p>
-
-              <div class="project-card__stack" aria-label="Tech stack">
-                <span class="stack-badge">Java</span>
-                <span class="stack-badge">JSP/Servlet</span>
-                <span class="stack-badge">MySQL</span>
-              </div>
-
-              <ul class="project-card__impact" aria-label="Key outcomes">
-                <li>Session-based login and lecturer/student workflows.</li>
-                <li>Attendance entries with basic duplicate-prevention validation.</li>
-                <li>Admin-ready views for reviewing and exporting attendance logs.</li>
-              </ul>
-
-              <div class="project-card__actions">
-                <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/Attendance-Management-System.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-                <a class="btn btn-outline btn-cta" href="https://attendance-management-system-1-38j8.onrender.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                <a class="btn btn-outline btn-cta" href="case-studies/attendance-management.html"><i class="bi bi-file-text"></i> Project Overview</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card-soft project-card project-card--v2">
-            <img class="project-card__img" src="assets/img/wanderlite.jpeg" alt="Weather system preview screenshot" loading="lazy">
-            <div class="project-card__content">
-              <h3 class="project-card__title">WanderLite Smart Tourism Dashboard</h3>
-              <p class="project-card__summary">A real-time tourism dashboard that combines weather, currency exchange, and nearby attractions in one experience.</p>
-
-              <div class="project-card__stack" aria-label="Tech stack">
-                <span class="stack-badge">Node.js</span>
-                <span class="stack-badge">Express.js</span>
-                <span class="stack-badge">Vanilla JavaScript</span>
-                <span class="stack-badge">Leaflet.js</span>
-                <span class="stack-badge">OpenWeather API</span>
-              </div>
-
-              <ul class="project-card__impact" aria-label="Key outcomes">
-                <li>Unifies weather, currency conversion, and nearby attractions in one dashboard.</li>
-                <li>Interactive city map with category-based attraction discovery.</li>
-                <li>Fallback data provider strategy improves attraction lookup reliability.</li>
-              </ul>
-
-              <div class="project-card__actions">
-                <a class="btn btn-primary btn-cta" href="https://github.com/AhmadDokoro/weather-tourism-dashboard.git" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
-                <a class="btn btn-outline btn-cta" href="https://weather-tourism-dashboard.onrender.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                <a class="btn btn-outline btn-cta" href="case-studies/weather-system.html"><i class="bi bi-file-text"></i> Project Overview</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education & Achievements Section -->
-    <section id="education" class="section light-background">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker"><i class="bi bi-mortarboard"></i> Education</span>
-          <h2>Education & achievements</h2>
-          <p class="section-lead">Strong academic performance recognized through multiple Dean’s List awards.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-8">
-            <div class="card-soft p-4 h-100 edu-hero">
-              <div class="edu-hero__top">
-                <div>
-                  <h3 class="h4 mb-1">Universiti Malaysia Terengganu</h3>
-                  <p class="edu-sub mb-0">Final-year • Software Engineering</p>
-                </div>
-                <span class="edu-aura" aria-label="High performer badge"><i class="bi bi-stars"></i> Dean’s List</span>
-              </div>
-
-              <p class="edu-note mt-3 mb-0">Consistently strong results in core software engineering coursework, recognized through Dean’s List awards.</p>
-
-              <div class="edu-awards mt-4">
-                <article class="edu-award">
-                  <a class="edu-award__thumb" href="assets/img/DL1.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Dean's List certificate for GPA 3.85 in a new tab">
-                    <img src="assets/img/DL1.jpeg" alt="Dean's List certificate (GPA 3.85 / 4.00)">
-                  </a>
-                  <div class="edu-award__body">
-                    <div class="edu-award__title"><i class="bi bi-award"></i> Dean’s List Award</div>
-                    <div class="edu-award__meta">GPA <strong>3.85</strong> / 4.00</div>
-                    <div class="edu-award__desc">Academic recognition for high performance.</div>
-                  </div>
-                </article>
-
-                <article class="edu-award">
-                  <a class="edu-award__thumb" href="assets/img/DL2.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Dean's List certificate for GPA 3.83 in a new tab">
-                    <img src="assets/img/DL2.jpeg" alt="Dean's List certificate (GPA 3.83 / 4.00)">
-                  </a>
-                  <div class="edu-award__body">
-                    <div class="edu-award__title"><i class="bi bi-award-fill"></i> Dean’s List Award</div>
-                    <div class="edu-award__meta">GPA <strong>3.83</strong> / 4.00</div>
-                    <div class="edu-award__desc">Recognized for sustained academic excellence.</div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card-soft p-4 h-100 edu-cv-card">
-              <h3 class="h5 mb-2">Download CV</h3>
-              <p class="edu-sub mb-3">A quick overview of education, projects, and skills.</p>
-              <a class="btn btn-primary btn-cta" href="assets/docs/resume.pdf" download>
-                <i class="bi bi-file-earmark-arrow-down"></i> Download CV
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker"><i class="bi bi-envelope"></i> Contact</span>
-          <h2>Let’s connect</h2>
-          <p class="section-lead">If you’re hiring a Java/Spring Boot intern, I’d love to help your team ship backend features and improve reliability.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="card-soft p-4 h-100">
-              <h3 class="h5 mb-3">Reach me</h3>
-              <ul class="list-unstyled mb-0" style="color: var(--muted-color);">
-                <li class="mb-2"><i class="bi bi-envelope me-2"></i> <a href="mailto:ahmadkabirudokoro@gmail.com">ahmadkabirudokoro@gmail.com</a></li>
-                <li class="mb-2"><i class="bi bi-linkedin me-2"></i> <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li class="mb-2"><i class="bi bi-github me-2"></i> <a href="https://github.com/AhmadDokoro" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Malaysia (current)</li>
-                <li><i class="bi bi-globe me-2"></i> Nationality: Nigerian</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card-soft p-4 h-100">
-              <h3 class="h5 mb-3">Quick call-to-action</h3>
-              <p style="color: var(--muted-color);">Want to see more details? Open the full projects page, or jump into a project overview.</p>
-              <div class="d-flex flex-wrap gap-2">
-                <a class="btn btn-primary btn-cta" href="portfolio.html"><i class="bi bi-images"></i> View All Projects</a>
-                <a class="btn btn-outline btn-cta" href="case-studies/campus-marketplace.html"><i class="bi bi-file-text"></i> Project Overview</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="orb orb--breathe-lg" style="top:50%;left:50%;transform:translate(-50%,-50%);animation:breathe 10s ease-in-out infinite"></div>
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span id="copyright-year"></span> <strong class="px-1 sitename">Kabiru Ahmad Dokoro</strong> <span>All Rights
-          Reserved</span></p>
+      <div class="reveal">
+        <div class="section-label section-label--purple">// about</div>
+        <h2 class="section-title" style="max-width:750px">Full-stack engineer.<br><span style="color:#0E7490">I build everything.</span></h2>
       </div>
-      <div class="credits">
-        Designed &amp; built by Kabiru Ahmad Dokoro
+
+      <div class="about__cards reveal-stagger">
+        <div class="glass-card" style="animation:borderGlow 6s ease-in-out infinite">
+          <p class="about__card-text">Software Engineer with a degree from Universiti Malaysia Terengganu. I design and build complete systems — from layered backend architecture with Spring Boot and Spring Data JPA to responsive frontend interfaces. I work across the full stack and deliver production-ready applications.</p>
+        </div>
+        <div class="glass-card glass-card--cyan">
+          <p class="about__card-text">My flagship project, a Campus Marketplace Platform, runs live on a DigitalOcean VPS serving real users. I own every layer: database design, REST API development, server-side rendering, third-party integrations, containerized deployment, and ongoing production operations.</p>
+        </div>
+      </div>
+
+      <div class="about__stats reveal-stagger">
+        <div class="stat-card stat-card--purple">
+          <div class="stat-card__number gradient-text">3.85</div>
+          <div class="stat-card__label">GPA</div>
+        </div>
+        <div class="stat-card stat-card--cyan">
+          <div class="stat-card__number gradient-text--reverse">3</div>
+          <div class="stat-card__label">Live Projects</div>
+        </div>
+        <div class="stat-card stat-card--purple">
+          <div class="stat-card__number gradient-text">2&times;</div>
+          <div class="stat-card__label">Dean's List</div>
+        </div>
+        <div class="stat-card stat-card--cyan">
+          <div class="stat-card__number gradient-text--reverse">VPS</div>
+          <div class="stat-card__label">Production</div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-  <!-- Preloader -->
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- ===== SKILLS ===== -->
+  <section class="skills" id="skills">
+    <div class="section-line section-line--purple"></div>
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label section-label--cyan">// skills</div>
+        <h2 class="section-title">What I <span class="gradient-text">work with</span></h2>
+      </div>
+
+      <div class="skills__grid reveal-stagger">
+        <!-- Backend -->
+        <div class="skill-card skill-card--purple">
+          <div class="skill-card__accent skill-card__accent--purple"></div>
+          <div class="skill-card__title">Backend & APIs</div>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--purple">Java</span>
+            <span class="skill-tag skill-tag--purple">Spring Boot</span>
+            <span class="skill-tag skill-tag--purple">Spring Data JPA</span>
+            <span class="skill-tag skill-tag--purple">REST APIs</span>
+            <span class="skill-tag skill-tag--purple">Node.js</span>
+            <span class="skill-tag skill-tag--purple">Express.js</span>
+            <span class="skill-tag skill-tag--purple">FastAPI</span>
+            <span class="skill-tag skill-tag--purple">Python</span>
+          </div>
+        </div>
+        <!-- Frontend -->
+        <div class="skill-card skill-card--cyan">
+          <div class="skill-card__accent skill-card__accent--cyan"></div>
+          <div class="skill-card__title">Frontend & UI</div>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--cyan">React</span>
+            <span class="skill-tag skill-tag--cyan">JavaScript</span>
+            <span class="skill-tag skill-tag--cyan">HTML5</span>
+            <span class="skill-tag skill-tag--cyan">CSS3</span>
+            <span class="skill-tag skill-tag--cyan">Thymeleaf</span>
+            <span class="skill-tag skill-tag--cyan">Leaflet.js</span>
+            <span class="skill-tag skill-tag--cyan">Responsive Design</span>
+          </div>
+        </div>
+        <!-- Data & Architecture -->
+        <div class="skill-card skill-card--purple">
+          <div class="skill-card__accent skill-card__accent--purple"></div>
+          <div class="skill-card__title">Data & Architecture</div>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--purple">MySQL</span>
+            <span class="skill-tag skill-tag--purple">SQL</span>
+            <span class="skill-tag skill-tag--purple">Layered Arch</span>
+            <span class="skill-tag skill-tag--purple">MVC</span>
+            <span class="skill-tag skill-tag--purple">ER Modeling</span>
+            <span class="skill-tag skill-tag--purple">JUnit</span>
+          </div>
+        </div>
+        <!-- DevOps -->
+        <div class="skill-card skill-card--mixed">
+          <div class="skill-card__accent skill-card__accent--mixed"></div>
+          <div class="skill-card__title">DevOps & Cloud</div>
+          <div class="skill-card__tags">
+            <span class="skill-tag skill-tag--muted">Docker</span>
+            <span class="skill-tag skill-tag--muted">Git</span>
+            <span class="skill-tag skill-tag--muted">DigitalOcean</span>
+            <span class="skill-tag skill-tag--muted">Render</span>
+            <span class="skill-tag skill-tag--muted">TiDB</span>
+            <span class="skill-tag skill-tag--muted">Cloudinary</span>
+            <span class="skill-tag skill-tag--muted">Postman</span>
+            <span class="skill-tag skill-tag--muted">CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <div class="section-line section-line--cyan"></div>
+    <div class="orb orb--cyan-sm" style="bottom:20%;right:-5%;animation:orbFloat2 18s ease-in-out infinite"></div>
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label section-label--purple">// projects</div>
+        <h2 class="section-title" style="margin-bottom:72px">Selected <span class="gradient-text--reverse">work</span></h2>
+      </div>
+
+      <!-- Project 1 — CMP -->
+      <div class="project project--img-left project__divider-purple reveal">
+        <div class="project__image project__image--purple">
+          <img src="assets/img/CMP.jpeg" alt="Campus Marketplace Platform" loading="lazy">
+          <div class="project__image-overlay--purple"></div>
+        </div>
+        <div class="project__info">
+          <div class="project__tags">
+            <span class="project-tag project-tag--purple">Spring Boot</span>
+            <span class="project-tag project-tag--cyan">MySQL (3NF)</span>
+            <span class="project-tag project-tag--purple">Thymeleaf</span>
+            <span class="project-tag project-tag--cyan">DigitalOcean</span>
+          </div>
+          <h3 class="project__title">UMT Campus Marketplace</h3>
+          <p class="project__desc">Student-to-student marketplace with role-based access, seller verification, secure transaction flow, and a fully normalized 3NF schema. Live in production on DigitalOcean VPS.</p>
+          <div class="project__links">
+            <a href="https://umtmarket.ahsmart.dev/" class="project__link project__link--purple" target="_blank" rel="noopener noreferrer">Live Site &rarr;</a>
+            <a href="https://github.com/AhmadDokoro/Campus_MarketPlace_Platform.git" class="project__link project__link--cyan" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+            <a href="case-studies/campus-marketplace.html" class="project__link project__link--muted">Case Study &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 — AMS -->
+      <div class="project project--img-right project__divider-cyan reveal">
+        <div class="project__info">
+          <div class="project__tags">
+            <span class="project-tag project-tag--purple">Java</span>
+            <span class="project-tag project-tag--cyan">JSP/Servlet</span>
+            <span class="project-tag project-tag--purple">MySQL</span>
+          </div>
+          <h3 class="project__title">Attendance Management System</h3>
+          <p class="project__desc">Role-based class attendance tracking with session management, duplicate-prevention validation, and admin export views.</p>
+          <div class="project__links">
+            <a href="https://attendance-management-system-1-38j8.onrender.com" class="project__link project__link--purple" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+            <a href="https://github.com/AhmadDokoro/Attendance-Management-System.git" class="project__link project__link--cyan" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+          </div>
+        </div>
+        <div class="project__image project__image--cyan">
+          <img src="assets/img/AMS.jpeg" alt="Attendance Management System" loading="lazy">
+          <div class="project__image-overlay--cyan"></div>
+        </div>
+      </div>
+
+      <!-- Project 3 — WanderLite -->
+      <div class="project project--img-left reveal" style="margin-bottom:0;padding-bottom:0">
+        <div class="project__image project__image--purple">
+          <img src="assets/img/wanderlite.jpeg" alt="WanderLite Tourism Dashboard" loading="lazy">
+          <div class="project__image-overlay--purple"></div>
+        </div>
+        <div class="project__info">
+          <div class="project__tags">
+            <span class="project-tag project-tag--cyan">Node.js</span>
+            <span class="project-tag project-tag--purple">Express.js</span>
+            <span class="project-tag project-tag--cyan">Leaflet.js</span>
+          </div>
+          <h3 class="project__title">WanderLite Tourism Dashboard</h3>
+          <p class="project__desc">Real-time tourism dashboard combining weather, currency exchange, and nearby attractions with an interactive city map and fallback data strategy.</p>
+          <div class="project__links">
+            <a href="https://weather-tourism-dashboard.onrender.com" class="project__link project__link--purple" target="_blank" rel="noopener noreferrer">Live Demo &rarr;</a>
+            <a href="https://github.com/AhmadDokoro/weather-tourism-dashboard.git" class="project__link project__link--cyan" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="education" id="education">
+    <div class="section-line section-line--mixed"></div>
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label section-label--cyan">// education</div>
+        <h2 class="section-title" style="margin-bottom:56px">Academic <span class="gradient-text">record</span></h2>
+      </div>
+
+      <div class="education__card reveal">
+        <div>
+          <h3 class="education__uni">Universiti Malaysia Terengganu</h3>
+          <p class="education__degree">B.Sc. Computer Science (Software Engineering)</p>
+          <p class="education__desc">Consistently strong academic performance across core software engineering coursework, recognized through multiple Dean's List awards.</p>
+        </div>
+        <div class="education__gpas">
+          <div class="gpa-card gpa-card--purple">
+            <div class="gpa-card__number gpa-card__number--purple">3.85</div>
+            <div class="gpa-card__label">DEAN'S LIST</div>
+          </div>
+          <div class="gpa-card gpa-card--cyan">
+            <div class="gpa-card__number gpa-card__number--cyan">3.83</div>
+            <div class="gpa-card__label">DEAN'S LIST</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="section-line section-line--cyan"></div>
+    <div class="orb orb--contact" style="top:30%;left:30%;animation:breathe 12s ease-in-out infinite"></div>
+    <div class="contact__inner">
+      <div class="reveal">
+        <div class="section-label section-label--purple">// contact</div>
+        <h2 class="contact__heading">Let's build<br>something together</h2>
+        <p class="contact__sub">Open to software engineering roles, scholarships, and collaboration.<br>Based in Malaysia, available worldwide. Let's create something impactful.</p>
+      </div>
+      <div class="contact__buttons reveal">
+        <a href="mailto:ahmadkabirudokoro@gmail.com" class="btn-gradient">EMAIL ME</a>
+        <a href="https://www.linkedin.com/in/kabiru-ahmad-dokoro-23a9a1363/" class="btn-ghost-cyan" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a href="https://github.com/AhmadDokoro" class="btn-ghost-purple" target="_blank" rel="noopener noreferrer">GITHUB</a>
+      </div>
+      <div class="contact__email reveal">
+        <span>ahmadkabirudokoro@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span class="footer__copy">&copy; 2026 Kabiru Ahmad Dokoro</span>
+      <span class="footer__location">Malaysia &middot; Nigerian</span>
+    </div>
+  </section>
+
+  <!-- Scroll to top -->
+  <a href="#hero" class="scroll-top" id="scrollTop" aria-label="Scroll to top">&uarr;</a>
+
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const el = document.getElementById('copyright-year');
-      if (el) el.textContent = new Date().getFullYear();
-    });
-  </script>
-</body>
+    (function() {
+      // --- Scroll-triggered reveals ---
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      // --- Nav scroll effect ---
+      var nav = document.getElementById('nav');
+      var scrollTop = document.getElementById('scrollTop');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 80) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+
+        if (window.scrollY > 600) {
+          scrollTop.classList.add('visible');
+        } else {
+          scrollTop.classList.remove('visible');
+        }
+      });
+
+      // --- Active nav link ---
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('.nav__links a');
+
+      window.addEventListener('scroll', function() {
+        var scrollPos = window.scrollY + 120;
+        sections.forEach(function(section) {
+          var top = section.offsetTop;
+          var height = section.offsetHeight;
+          var id = section.getAttribute('id');
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(function(link) {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+
+      // --- Mobile menu toggle ---
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        links.classList.toggle('open');
+      });
+
+      links.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          toggle.classList.remove('active');
+          links.classList.remove('open');
+        });
+      });
+    })();
+  </script>
+
+</body>
 </html>
